@@ -29,15 +29,15 @@ angular.module('categories',[]).
                         var data = { category: category, subcategory: subcategory, amount: amount, account: account, paymenttype: paymenttype, date: date, comment:comment };
                         var postdata = 'mydata='+JSON.stringify(data);
                         console.log(postdata);
-//                         $http({
-//                                   method: 'POST',
-//                                  url: 'http://localhost:3002/addtrans',
-//                                   data: postdata,
-//                                   headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-//                               }).
-//                            success(function(data, status, headers, config){
-//                                cb(data);
-//                        })
+                         $http({
+                                   method: 'POST',
+                                  url: 'http://localhost:3002/addtrans',
+                                   data: postdata,
+                                   headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+                               }).
+                            success(function(data, status, headers, config){
+                                cb(data);
+                        })
                     }
                 }
             }).directive("categoryList", function () {
@@ -86,7 +86,7 @@ angular.module('categories',[]).
                                      };
                                      $scope.addTrans = function () {
                                          console.log("adding transaction");
-                                         $categories.addNewTransaction($scope.currentCategory,$scope.currentSubCategory,$scope.currentAmount,$scope.currentAccount,$scope.currentPaymentType,"2014-03-05",$scope.currentComment,function(inserted){})
+                                         $categories.addNewTransaction($scope.currentCategory,$scope.currentSubCategory,$scope.currentAmount,$scope.currentAccount,$scope.currentPaymentType,$scope.currentDate,$scope.currentComment,function(inserted){})
                                      }
 
                                  },
