@@ -1,0 +1,39 @@
+<div ns-controller="categoriesCtrl">
+    <h3>Categories:</h3>
+
+        <button class="btn btn-primary btn-lg" ng-repeat="category in categories" ng-click="setCurrentCategory(category.id)">
+            {{category.name}}
+        </button>
+
+    <h3>Sub Categories</h3>
+        <button class="btn btn-primary btn-lg" ng-repeat="subcategory in subcategories | filter:categoryFilter" ng-click="setCurrentSubCategory(subcategory.id)">
+           {{subcategory.name}}
+        </button>
+
+    <h3>Accounts</h3>
+        <button class="btn btn-primary btn-lg" ng-repeat="account in accounts" ng-click="setCurrentAccount(account.id)">
+           {{account.name}}
+        </button>
+
+    <h3>Payment Type</h3>
+        <button class="btn btn-primary btn-lg" ng-repeat="paymenttype in paymenttypes | filter:accountFilter" ng-click="setCurrentPaymentType(paymenttype.id)">
+           {{paymenttype.name}}
+        </button>
+
+    <h3>Category: {{currentCategory}} Sub Category: {{currentSubCategory}} Amount: {{currentAmount}} Account: {{currentAccount}} Payment: {{currentPaymentType}} Comment: {{currentComment}}</h3>
+<button class="btn btn-warning" ng-click="addTrans()">Click</button>
+<input type="text" ng-model="currentAmount" placeholder="Enter amount">
+<input type="text" ng-model="currentComment" placeholder="Enter comment">
+
+<div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+</div>
+
+</div>
