@@ -1,0 +1,33 @@
+<div>
+    <h3><span>Sum: {{ trans|sumIt:'all' }} </span></h3>
+<accordion close-others="true">
+            <accordion-group ng-repeat="t in uniqueTrans = (trans | unique:'Category')">
+                <accordion-heading>
+                    <span class="glyphicon {{t.path}}"></span><strong> {{t.Category}} {{ trans|sumIt:t.Category }}</strong>
+                </accordion-heading>
+        <table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Category</th>
+				<th>Sub Category</th>
+				<th>Amount</th>
+				<th>Paid With</th>
+				<th>Comment</th>
+			</tr>
+		</thead>
+		<tbody>
+        <tr ng-repeat="s in trans | orderBy:'Date' | filter:{ Category: t.Category }">
+          <td><span class="glyphicon glyphicon-trash" ng-click="delTrans(s)"></span></td>
+          <td>{{s.Date}}</td>
+		  <td>{{s.Category}}</td>
+		  <td>{{s.subCategory}}</td>
+		  <td>{{s.Amount}}</td>
+		  <td>{{s.paymentType}}</td>
+		  <td>{{s.comment}}</td>
+        </tr>
+         </tbody>
+      </table>
+            </accordion-group>
+        </accordion>
+    </div>

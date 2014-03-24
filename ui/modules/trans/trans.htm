@@ -1,4 +1,8 @@
 <div class="table-responsive">
+     <h3><span>Sum: {{ transSum(filteredTrans) }} </span></h3>
+    Filter: <select ng-model="filterit" ng-options="t.Category for t in uniqueTrans = (trans | unique:'Category')">
+      <option value="">-- Choose Category --</option>
+    </select>
       <table class="table table-striped">
 		<thead>
 			<tr>
@@ -11,7 +15,8 @@
 			</tr>
 		</thead>
 		<tbody>
-        <tr ng-repeat="tran in trans">
+        <tr ng-repeat="tran in filteredTrans = (trans | orderBy:'Date' | filter:filterit.Category)">
+
           <td>{{tran.Date}}</td>
 		  <td>{{tran.Category}}</td>
 		  <td>{{tran.subCategory}}</td>
@@ -21,4 +26,5 @@
         </tr>
          </tbody>
       </table>
+    <h3>Count: {{filteredTrans.length}}</h3>
 </div>

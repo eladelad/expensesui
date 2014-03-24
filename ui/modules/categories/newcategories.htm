@@ -1,0 +1,29 @@
+<div>
+    <div id="chooser">
+        <button ng-show="!categoryNotSelected" ng-click="categoryNotSelected = true"><span class="glyphicon {{currentCategory.path}}"></span><strong> {{currentCategory.name}}</strong></button>
+        <button ng-show="!subCategoryNotSelected && !categoryNotSelected" ng-click="subCategoryNotSelected = true"><span class="glyphicon {{currentSubCategory.path}}"></span><strong> {{currentSubCategory.name}}</strong></button>
+
+         <div ng-show="categoryNotSelected">
+            <button class="btn btn-primary btn-lg col-md-4" ng-repeat="category in categories" ng-click="setCurrentCategory(category)">
+                <span class="glyphicon {{category.path}}"></span><strong> {{category.name}}</strong>
+            </button>
+        </div>
+
+        <div ng-show="subCategoryNotSelected">
+            <button class="btn btn-primary btn-lg col-md-4" ng-repeat="subcategory in subcategories | filter:{ category: currentCategory.id }" ng-click="setCurrentSubCategory(subcategory)">
+               <span class="glyphicon {{subcategory.path}}"></span>
+                {{subcategory.name}}
+            </button>
+        </div>
+    </div>
+    <div class="form-group" ng-show="!subCategoryNotSelected && !categoryNotSelected">
+
+        <select class="form-control" ng-model="currentAccount" ng-options="account.name for account in accounts" ><option value="">-- Choose Account --</option></select><br>
+        <select class="form-control" ng-model="currentPaymentType" ng-options="paymenttype.name for paymenttype in paymenttypes | filter:{ account: currentAccount.id }" ><option value="">-- Choose Payment --</option></select><br>
+        <input type="number" class="form-control" ng-model="currentAmount" placeholder="Enter amount"><br>
+        <input type="text" class="form-control" ng-model="currentComment" placeholder="Enter comment"><br>
+        <input type="text" ng-model="currentDate" date-options="dateOptions" custom-datepicker /><br>
+        <button class="btn btn-warning" ng-click="addTrans()">Add Trans</button><br>
+        <h3>Category: {{currentCategory.name}} Sub Category: {{currentSubCategory.name}} Amount: {{currentAmount}} Account: {{currentAccount.name}} Payment: {{currentPaymentType.name}} Comment: {{currentComment}}</h3>
+    </div>
+</div>

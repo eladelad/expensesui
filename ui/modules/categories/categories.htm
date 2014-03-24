@@ -1,29 +1,29 @@
-<div ns-controller="categoriesCtrl">
-    <h3>Categories:</h3>
-
-        <button class="btn btn-primary btn-lg" ng-repeat="category in categories" ng-click="setCurrentCategory(category.id)">
-            {{category.name}}
-        </button>
-
-    <h3>Sub Categories</h3>
-        <button class="btn btn-primary btn-lg" ng-repeat="subcategory in subcategories | filter:categoryFilter" ng-click="setCurrentSubCategory(subcategory.id)">
-           {{subcategory.name}}
-        </button>
-
-    <h3>Accounts</h3>
-        <button class="btn btn-primary btn-lg" ng-repeat="account in accounts" ng-click="setCurrentAccount(account.id)">
+<div>
+       <h3>Accounts</h3>
+        <button class="btn btn-primary btn-lg" ng-repeat="account in accounts" ng-click="setCurrentAccount(account)">
            {{account.name}}
         </button>
 
     <h3>Payment Type</h3>
-        <button class="btn btn-primary btn-lg" ng-repeat="paymenttype in paymenttypes | filter:accountFilter" ng-click="setCurrentPaymentType(paymenttype.id)">
+        <button class="btn btn-primary btn-lg" ng-repeat="paymenttype in paymenttypes | filter:accountFilter" ng-click="setCurrentPaymentType(paymenttype)">
            {{paymenttype.name}}
         </button>
 
-    <h3>Category: {{currentCategory}} Sub Category: {{currentSubCategory}} Amount: {{currentAmount}} Account: {{currentAccount}} Payment: {{currentPaymentType}} Comment: {{currentComment}}</h3>
-<button class="btn btn-warning" ng-click="addTrans()">Click</button>
-<input type="text" ng-model="currentAmount" placeholder="Enter amount">
-<input type="text" ng-model="currentComment" placeholder="Enter comment">
-<input type="text" ng-model="currentDate" placeholder="Enter Date">
+    <accordion close-others="true">
+            <accordion-group ng-repeat="category in categories"  ng-click="setCurrentCategory(category)">
+                <accordion-heading>
+                    <span class="glyphicon {{category.path}}"></span><strong> {{category.name}}</strong>
+                </accordion-heading>
+                <button class="btn btn-primary btn-lg col-md-4" ng-repeat="subcategory in subcategories | filter:{ category: category.id }" ng-click="setCurrentSubCategory(subcategory)">
+           <span class="glyphicon {{subcategory.path}}"></span> {{subcategory.name}}
+        </button>
+            </accordion-group>
+        </accordion>
+
+    <h3>Category: {{currentCategory.name}} Sub Category: {{currentSubCategory.name}} Amount: {{currentAmount}} Account: {{currentAccount.name}} Payment: {{currentPaymentType.name}} Comment: {{currentComment}}</h3>
+<input type="text" ng-model="currentAmount" placeholder="Enter amount"><br>
+<input type="text" ng-model="currentComment" placeholder="Enter comment"><br>
+<input type="text" ng-model="currentDate" placeholder="Enter Date" date-options="dateOptions" custom-datepicker /><br>
+<button class="btn btn-warning" ng-click="addTrans()">Add Trans</button><br>
 
 </div>

@@ -8,22 +8,26 @@
     <meta name="author" content="">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
   </head>
 
   <body>
     <h2>Expenses</h2>
-    <!--<trans-list></trans-list>-->
+
+    <trans-list></trans-list>
     <category-list category-filter="currentCategory" account-filter="currentAccount"></category-list>
-    <!--<new-trans-form current-category="currentCategory" current-sub-category="currentSubCategory"></new-trans-form>-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/ui-utils.min.js"></script>
     <script src="modules/trans/trans.js"></script>
     <script src="modules/categories/categories.js"></script>
-    <script src="modules/categories/datepicker.js"></script>
     <script src="modules/newtrans/newtrans.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="modules/cdatepkr/cdatepkr.js"></script>
   </body>
 </html>

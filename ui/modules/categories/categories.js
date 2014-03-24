@@ -1,26 +1,26 @@
-angular.module('categories',[]).
+angular.module('categories',['cdatepkr']).
     factory('$categories', function($http) {
                 return {
                     getCategories: function(cb) {
-                        $http({method: 'GET', url: 'http://localhost:3002/getcats'}).
+                        $http({method: 'GET', url: '/getcats'}).
                             success(function(data, status, headers, config){
                                 cb(data);
                             })
                     },
                     getSubCategories: function(cb){
-                        $http({method:'GET', url: 'http://localhost:3002/getsubcats'}).
+                        $http({method:'GET', url: '/getsubcats'}).
                             success(function(data, status, headers, config){
                                 cb(data);
                             })
                     },
                     getPaymentType: function(cb){
-                        $http({method:'GET', url: 'http://localhost:3002/getpayments'}).
+                        $http({method:'GET', url: '/getpayments'}).
                             success(function(data, status, headers, config){
                                 cb(data);
                             })
                     },
                     getAccounts: function(cb){
-                        $http({method:'GET', url: 'http://localhost:3002/getaccounts'}).
+                        $http({method:'GET', url: '/getaccounts'}).
                             success(function(data, status, headers, config){
                                 cb(data);
                             })
@@ -31,7 +31,7 @@ angular.module('categories',[]).
                         console.log(postdata);
                          $http({
                                    method: 'POST',
-                                  url: 'http://localhost:3002/addtrans',
+                                  url: '/addtrans',
                                    data: postdata,
                                    headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
                                }).
@@ -44,54 +44,64 @@ angular.module('categories',[]).
                              return {
                                  restrict:"E",
                                  scope: { categoryFilter : "=", accountFilter: "=", currentSubCategory : "@" },
-                                 templateUrl:'/modules/categories/categories.htm',
-                                 controller: function($scope, $categories){
+                                 templateUrl:'/modules/categories/newcategories.htm',
+                                 controller: function($scope, $categories, $transactions){
+
+                                     $scope.categoryNotSelected = true;
+                                     $scope.subCategoryNotSelected = false;
                                      $categories.getCategories(function(categories){
-                                         console.log("Got Categories");
-                                         console.log(categories);
+                                         console.log("function getCategories");
                                          $scope.categories = categories.cats;
                                      });
                                      $categories.getSubCategories(function(subcategories){
-                                         console.log("Got Sub Cats");
-                                         console.log(subcategories);
+                                         console.log("function getSubCategories");
                                          $scope.subcategories = subcategories.subcats;
                                      });
                                      $categories.getPaymentType(function(paymenttypes){
-                                         console.log("Got payments");
-                                         console.log(paymenttypes);
+                                         console.log("function getPaymentType");
                                          $scope.paymenttypes = paymenttypes.paymenttype;
                                      });
                                      $categories.getAccounts(function(accounts){
-                                         console.log("Got accounts");
-                                         console.log(accounts);
+                                         console.log("function getAccounts");
                                          $scope.accounts = accounts.accounts;
                                      });
-                                     $scope.setCurrentCategory = function (categoryId) {
-                                         console.log("Clicked on Category " + categoryId);
-                                         $scope.currentCategory = categoryId;
-                                        $scope.categoryFilter = {category: categoryId};
+                                     $scope.setCurrentCategory = function (category) {
+                                         console.log("funciton setCurrentCategory(" + category.name + ")");
+                                         $scope.currentCategory = category;
+                                        $scope.categoryFilter = {category: category.id};
+                                         $scope.categoryNotSelected = false;
+                                         $scope.subCategoryNotSelected = true;
+                                         //console.log($transactions.trans);
                                      };
-                                     $scope.setCurrentSubCategory = function (subcategoryId){
-                                         console.log("Sub Category " + subcategoryId);
-                                         $scope.currentSubCategory = subcategoryId;
-                                     };
-                                     $scope.setCurrentAccount = function (accountId) {
-                                         console.log("Clicked on Account " + accountId);
-                                         $scope.accountFilter = {account: accountId};
-                                         $scope.currentAccount = accountId;
-                                     };
-                                     $scope.setCurrentPaymentType = function (paymenttypeId) {
-                                         console.log("Clicked on PaymentType " + paymenttypeId);
-                                         $scope.currentPaymentType = paymenttypeId;
+                                     $scope.setCurrentSubCategory = function (subcategory){
+                                         console.log("function setCurrentSubCategory(" + subcategory.name +")");
+                                         $scope.currentSubCategory = subcategory;
+                                         $scope.subCategoryNotSelected = false;
+
                                      };
                                      $scope.addTrans = function () {
                                          console.log("adding transaction");
-                                         $categories.addNewTransaction($scope.currentCategory,$scope.currentSubCategory,$scope.currentAmount,$scope.currentAccount,$scope.currentPaymentType,$scope.currentDate,$scope.currentComment,function(inserted){})
+                                         $categories.addNewTransaction(
+                                             $scope.currentCategory.id,
+                                             $scope.currentSubCategory.id,
+                                             $scope.currentAmount,
+                                             $scope.currentAccount.id,
+                                             $scope.currentPaymentType.id,
+                                             $scope.currentDate,
+                                             $scope.currentComment,
+                                             function(inserted){
+                                                 if (inserted){
+                                                    $scope.currentAmount = "";
+                                                    $scope.currentDate = "";
+                                                    $scope.currentComment="";
+                                                 } else { console.log(inserted); console.log("Error inserting"+inserted)}
+                                             })
                                      }
 
                                  },
-                                link: function () {
-                                    console.log("link on categories list");
+                                link: function ($scope) {
+                                    console.log("link");
+
                                 }
                              }
                          }
