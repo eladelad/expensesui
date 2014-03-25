@@ -22,17 +22,23 @@ angular.module('transactions', []).
             restrict: "E",
             scope: {},
             templateUrl: "/modules/trans/newtrans.htm",
-            controller: function ($scope, $transactions) {
+            controller: function ($scope, $categories, $transactions) {
                 console.log("Directive transList");
                 $scope.delTrans = function(transaction){
                    $transactions.delTrans(transaction, function(deleted){
                        if (deleted == 0) {
-                           console.log("Deleted ");
+                           console.log("Deleted");
                            var index = $scope.trans.indexOf(transaction);
                            if (index != -1) { $scope.trans.splice(index, 1); }
                        } else {console.log ("Error" + deleted)}
                    });
                 };
+                $scope.editTrans = function(transaction){
+                    console.log("Edit Transaction "+transaction.id)
+                    $categories.editTrans(transaction);
+
+                }
+
                 $transactions.getTrans(function() {});
 
                 $scope.$watch(function () {

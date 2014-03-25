@@ -1,6 +1,7 @@
 angular.module('categories',['cdatepkr']).
     factory('$categories', function($http) {
                 return {
+                    
                     getCategories: function(cb) {
                         $http({method: 'GET', url: '/getcats'}).
                             success(function(data, status, headers, config){
@@ -25,9 +26,8 @@ angular.module('categories',['cdatepkr']).
                                 cb(data);
                             })
                     },
-                    addNewTransaction: function(category, subcategory, amount, account, paymenttype, date, comment, cb){
-                        var data = { category: category, subcategory: subcategory, amount: amount, account: account, paymenttype: paymenttype, date: date, comment:comment };
-                        var postdata = 'mydata='+JSON.stringify(data);
+                    addNewTransaction: function(transaction, cb){
+                        var postdata = 'mydata='+JSON.stringify(transaction);
                         console.log(postdata);
                          $http({
                                    method: 'POST',
@@ -38,6 +38,10 @@ angular.module('categories',['cdatepkr']).
                             success(function(data, status, headers, config){
                                 cb(data);
                         })
+                    },
+                    editTrans: function(transaction){
+                        console.log(transaction);
+
                     }
                 }
             }).directive("categoryList", function () {
@@ -81,23 +85,37 @@ angular.module('categories',['cdatepkr']).
                                      };
                                      $scope.addTrans = function () {
                                          console.log("adding transaction");
-                                         $categories.addNewTransaction(
-                                             $scope.currentCategory.id,
-                                             $scope.currentSubCategory.id,
-                                             $scope.currentAmount,
-                                             $scope.currentAccount.id,
-                                             $scope.currentPaymentType.id,
-                                             $scope.currentDate,
-                                             $scope.currentComment,
+
+                                         var transaction = { category: $scope.currentCategory.id,
+                                             subcategory: $scope.currentSubCategory.id,
+                                             amount: $scope.currentAmount,
+                                             account: $scope.currentAccount.id,
+                                             paymenttype: $scope.currentPaymentType.id,
+                                             date: $scope.currentDate,
+                                             comment:$scope.currentComment };
+                                         $categories.addNewTransaction(transaction,
                                              function(inserted){
-                                                 if (inserted){
+                                                 if (inserted % 1 == 0){
+                                                    var newtrans = {
+                                                        Account: $scope.currentAccount.name,
+                                                        Amount: $scope.currentAmount,
+                                                        Category: $scope.currentCategory.name,
+                                                        Date: $scope.currentDate,
+                                                        comment: $scope.currentComment,
+                                                        id: inserted,
+                                                        paymentType: $scope.currentPaymentType.name,
+                                                        subCategory: $scope.currentSubCategory.name
+                                                    };
+                                                     console.log(newtrans);
+                                                    $transactions.trans.push(newtrans);
+                                                    $scope.currentPaymentType = "";
+                                                    $scope.currentAccount = "";
                                                     $scope.currentAmount = "";
                                                     $scope.currentDate = "";
                                                     $scope.currentComment="";
                                                  } else { console.log(inserted); console.log("Error inserting"+inserted)}
                                              })
-                                     }
-
+                                     };
                                  },
                                 link: function ($scope) {
                                     console.log("link");
