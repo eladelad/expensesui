@@ -1,7 +1,7 @@
 angular.module('categories',['cdatepkr']).
     factory('$categories', function($http) {
                 return {
-                    
+                    currentTrans: {},
                     getCategories: function(cb) {
                         $http({method: 'GET', url: '/getcats'}).
                             success(function(data, status, headers, config){
@@ -41,6 +41,7 @@ angular.module('categories',['cdatepkr']).
                     },
                     editTrans: function(transaction){
                         console.log(transaction);
+                        this.currentTrans = transaction;
 
                     }
                 }
@@ -115,6 +116,9 @@ angular.module('categories',['cdatepkr']).
                                                     $scope.currentComment="";
                                                  } else { console.log(inserted); console.log("Error inserting"+inserted)}
                                              })
+                                     };
+                                     $scope.editTrans = function(){
+                                         console.log(currentTrans);
                                      };
                                  },
                                 link: function ($scope) {

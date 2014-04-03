@@ -1,13 +1,14 @@
 angular.module('transactions', []).
     factory("$transactions",function ($http) {
         return {
+            currentMonth: new Date,
             trans: [],
-            getTrans: function (cb) {
+            getTrans: function (currentMonth, currentYear, cb) {
                 var that = this;
-                $http({method: 'GET', url: '/gettrans'}).
+                $http({method: 'GET', url: '/gettrans', params: { mm: currentMonth, yyyy: currentYear }}).
                     success(function (data, status, headers, config) {
-                        cb();
                         that.trans = data.trans;
+                        cb();
                     })
             },
             delTrans: function(transaction,cb){
@@ -22,7 +23,7 @@ angular.module('transactions', []).
             restrict: "E",
             scope: {},
             templateUrl: "/modules/trans/newtrans.htm",
-            controller: function ($scope, $categories, $transactions) {
+            controller: function ($scope, $filter, $categories, $transactions) {
                 console.log("Directive transList");
                 $scope.delTrans = function(transaction){
                    $transactions.delTrans(transaction, function(deleted){
@@ -39,7 +40,19 @@ angular.module('transactions', []).
 
                 }
 
-                $transactions.getTrans(function() {});
+                $scope.currentMonth = new Date();
+
+                $scope.$watch(function() {
+                    return $scope.currentMonth
+                }, function () {
+                    if ($scope.currentMonth != $transactions.currentMonth){
+                        $transactions.currentMonth = $scope.currentMonth;
+                        $transactions.getTrans($filter('date')($scope.currentMonth,'MM'),$filter('date')($scope.currentMonth,'yyyy'),function() {});
+                    }
+                }, true);
+
+
+                //$transactions.getTrans(function() {});
 
                 $scope.$watch(function () {
                     return $transactions.trans

@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc61556b-cddd-461b-9336-019414ba4a92" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/modules/cdatepkr/cdatepkr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/modules/cdatepkr/custom-datepicker.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/modules/fdatepkr/datePicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/modules/fdatepkr/dateRange.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/modules/fdatepkr/datepicker.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/modules/fdatepkr/fdatepkr.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/modules/fdatepkr/input.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/js/ui-utils.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webserver.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/modules/categories/categories.js" afterPath="$PROJECT_DIR$/ui/modules/categories/categories.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/index.htm" afterPath="$PROJECT_DIR$/ui/index.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/modules/categories/newcategories.htm" afterPath="$PROJECT_DIR$/ui/modules/categories/newcategories.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/modules/trans/newtrans.htm" afterPath="$PROJECT_DIR$/ui/modules/trans/newtrans.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/modules/trans/trans.js" afterPath="$PROJECT_DIR$/ui/modules/trans/trans.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/js/ui.js" afterPath="$PROJECT_DIR$/ui/js/ui.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="expensesui.iws" />
@@ -31,7 +43,7 @@
       <file leaf-file-name="index.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="22" selection-start="30" selection-end="38" vertical-scroll-proportion="-0.0" vertical-offset="17" max-vertical-offset="646">
+            <state line="19" column="0" selection-start="695" selection-end="695" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -40,7 +52,7 @@
       <file leaf-file-name="ui.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/js/ui.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+            <state line="6" column="16" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
               <folding />
             </state>
           </provider>
@@ -49,16 +61,25 @@
       <file leaf-file-name="newcategories.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/modules/categories/newcategories.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="1135" selection-end="1135" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="578">
+            <state line="28" column="63" selection-start="2347" selection-end="2347" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="categories.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="categories.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/modules/categories/categories.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="20" selection-start="133" selection-end="133" vertical-scroll-proportion="0.09107143" vertical-offset="0" max-vertical-offset="2244">
+            <state line="106" column="99" selection-start="6605" selection-end="6605" vertical-scroll-proportion="-72.08" vertical-offset="0" max-vertical-offset="2312">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newtrans.htm" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui/modules/trans/newtrans.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="51" selection-start="583" selection-end="583" vertical-scroll-proportion="0.27324915" vertical-offset="0" max-vertical-offset="871">
               <folding />
             </state>
           </provider>
@@ -67,16 +88,7 @@
       <file leaf-file-name="webserver.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webserver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="-19.72" vertical-offset="0" max-vertical-offset="2499">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newtrans.htm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/modules/trans/newtrans.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="74" selection-start="915" selection-end="915" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="697">
+            <state line="77" column="44" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2499">
               <folding />
             </state>
           </provider>
@@ -85,16 +97,7 @@
       <file leaf-file-name="trans.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/modules/trans/trans.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="67" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-datepicker.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/modules/cdatepkr/custom-datepicker.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="10" selection-start="338" selection-end="338" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="187">
+            <state line="9" column="48" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
               <folding />
             </state>
           </provider>
@@ -123,30 +126,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ui/modules/newtrans/newtrans.js" />
-        <option value="$PROJECT_DIR$/ui/modules/categories/datepicker.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/ui/modules/cdatepkr/cdatepkr.js" />
         <option value="$PROJECT_DIR$/ui/js/ui-bootstrap-tpls-0.10.0.min.js" />
         <option value="$PROJECT_DIR$/ui/modules/categories/categories.htm" />
         <option value="$PROJECT_DIR$/wow.js" />
-        <option value="$PROJECT_DIR$/ui/index.htm" />
         <option value="$PROJECT_DIR$/ui/modules/cdatepkr/custom-datepicker.html" />
-        <option value="$PROJECT_DIR$/ui/js/ui.js" />
         <option value="$PROJECT_DIR$/ui/modules/trans/trans.htm" />
         <option value="$PROJECT_DIR$/ui/modules/categories/newcategories.htm" />
-        <option value="$PROJECT_DIR$/webserver.js" />
-        <option value="$PROJECT_DIR$/ui/modules/trans/newtrans.htm" />
-        <option value="$PROJECT_DIR$/ui/modules/trans/trans.js" />
         <option value="$PROJECT_DIR$/ui/modules/categories/categories.js" />
+        <option value="$PROJECT_DIR$/ui/js/ui.js" />
+        <option value="$PROJECT_DIR$/ui/modules/fdatepkr/datePicker.js" />
+        <option value="$PROJECT_DIR$/ui/modules/fdatepkr/fdatepkr.css" />
+        <option value="$PROJECT_DIR$/ui/index.htm" />
+        <option value="$PROJECT_DIR$/ui/modules/trans/trans.js" />
+        <option value="$PROJECT_DIR$/ui/modules/trans/newtrans.htm" />
+        <option value="$PROJECT_DIR$/webserver.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1380" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -269,6 +272,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="fdatepkr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expensesui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expensesui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="cdatepkr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -346,6 +371,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\elad\Documents\Web Stuff\nodejs\expensesui\ui\modules\fdatepkr" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\elad\Documents\Web Stuff\nodejs\expensesui\ui\modules\trans" />
       <recent name="C:\Users\elad\Documents\Web Stuff\nodejs\expensesui\ui\modules" />
@@ -532,29 +560,33 @@
       <created>1395691668854</created>
       <updated>1395691668854</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working 250314">
+      <created>1395733865431</created>
+      <updated>1395733865431</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1380" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17888562" sideWeight="0.6710098" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12708333" sideWeight="0.6706392" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -568,118 +600,100 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Working 240314" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working 240314" />
+    <MESSAGE value="Working 250314" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working 250314" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui/modules/newtrans/newtrans.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/modules/cdatepkr/cdatepkr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="863" selection-end="863" vertical-scroll-proportion="-16.32" vertical-offset="0" max-vertical-offset="2669">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/modules/categories/datepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="2" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/js/ui-bootstrap-tpls-0.10.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32021" selection-start="32146" selection-end="32146" vertical-scroll-proportion="0.15869312" vertical-offset="0" max-vertical-offset="857">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/modules/categories/categories.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="30" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="3" selection-start="669" selection-end="669" vertical-scroll-proportion="0.49196142" vertical-offset="0" max-vertical-offset="933">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="612" selection-end="612" vertical-scroll-proportion="-0.07173913" vertical-offset="474" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui/modules/cdatepkr/custom-datepicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="338" selection-end="338" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/modules/trans/trans.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="53" selection-start="216" selection-end="263" vertical-scroll-proportion="0.058553386" vertical-offset="0" max-vertical-offset="871">
+        <state line="5" column="10" selection-start="338" selection-end="338" vertical-scroll-proportion="0.09758898" vertical-offset="0" max-vertical-offset="871">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/modules/categories/newcategories.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="1135" selection-end="1135" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="-19.72" vertical-offset="0" max-vertical-offset="2499">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/js/ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/modules/trans/newtrans.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="74" selection-start="915" selection-end="915" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/modules/trans/trans.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="67" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+        <state line="28" column="63" selection-start="2347" selection-end="2347" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/modules/categories/categories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="133" selection-end="133" vertical-scroll-proportion="0.09107143" vertical-offset="0" max-vertical-offset="2244">
+        <state line="106" column="99" selection-start="6605" selection-end="6605" vertical-scroll-proportion="-72.08" vertical-offset="0" max-vertical-offset="2312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/modules/fdatepkr/datepicker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="44" selection-start="947" selection-end="947" vertical-scroll-proportion="-0.6590126" vertical-offset="1067" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/js/ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/modules/fdatepkr/fdatepkr.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="1" selection-start="6032" selection-end="6032" vertical-scroll-proportion="0.0" vertical-offset="3064" max-vertical-offset="4029">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/modules/fdatepkr/datePicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="101" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/modules/fdatepkr/input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="37" selection-start="2110" selection-end="2116" vertical-scroll-proportion="-11.6" vertical-offset="866" max-vertical-offset="2499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="695" selection-end="695" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/modules/newtrans/newtrans.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/modules/trans/trans.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="48" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="44" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/modules/trans/newtrans.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="51" selection-start="583" selection-end="583" vertical-scroll-proportion="0.27324915" vertical-offset="0" max-vertical-offset="871">
           <folding />
         </state>
       </provider>

@@ -1,5 +1,14 @@
 <div>
     <h3><span>Sum: {{ trans|sumIt:'all' }} </span></h3>
+    <div class="dropdown">
+      <a class="dropdown-toggle btn btn-danger">
+        {{(currentMonth|date:'MMM-yyyy')}}
+      </a>
+
+      <div class="dropdown-menu" ng-click="$event.preventDefault();$event.stopPropagation()">
+        <div date-picker="currentMonth" min-view="month"></div>
+      </div>
+    </div>
 <accordion close-others="true">
             <accordion-group ng-repeat="t in uniqueTrans = (trans | unique:'Category')">
                 <accordion-heading>

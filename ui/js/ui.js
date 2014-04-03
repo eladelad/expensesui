@@ -3,5 +3,6 @@ angular.module('expenses', [
     'categories',
     'newtrans',
     'ui.bootstrap',
-    'ui.utils'
+    'ui.utils',
+    'datePicker'
 ]).run(function(){});
